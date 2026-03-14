@@ -2,11 +2,11 @@ class Solution {
     public int searchInsert(int[] nums, int target) {
         int left=0;
         int right=nums.length-1;
-        int ans=0;
-        while(left<right)
+        int ans=nums.length;
+        while(left<=right)
         {
             int mid=(left+right)/2;
-            if(nums[mid]<=target)
+            if(nums[mid]>=target)
             {
                 ans=mid;
                 right=mid-1;
@@ -14,7 +14,8 @@ class Solution {
             else {
                 left=mid+1;
             }
+         
         }
-        return mid;
+        return ans;
     }
 }
