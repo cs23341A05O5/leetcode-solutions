@@ -7,12 +7,14 @@ class Solution {
             if(count==0)
             {
                 cand=nums[i];
+                count=1;
             }
             else if(nums[i]==cand)
             {
                 count++;
             }
-            else{count--;
+            else{
+                count--;
             }
         }return cand;
     }
