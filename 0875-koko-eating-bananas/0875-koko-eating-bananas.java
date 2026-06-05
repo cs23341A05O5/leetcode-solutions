@@ -13,7 +13,6 @@ class Solution {
             for(int i=0;i<piles.length;i++)
             {
                 hours+=Math.ceil((double)piles[i]/mid);
-
             }
             if(hours<=h)
             {
